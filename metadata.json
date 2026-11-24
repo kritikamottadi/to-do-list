@@ -1,0 +1,6 @@
+{
+  "name": "Folio — Personal Editorial Planner",
+  "description": "A tactile, stationery-inspired personal task planner with customizable categories, curated typography, and interactive scrapbook stickers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

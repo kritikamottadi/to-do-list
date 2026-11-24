@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-hand: "Caveat", cursive;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html,
+  body {
+    font-family: var(--font-sans);
+    background-color: #faf6f0;
+    color: #2b211d;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: rgba(109, 46, 70, 0.16);
+    color: #2b211d;
+  }
+}
+
+.paper-ivory {
+  background-color: #faf6f0;
+}
+
+.paper-blush {
+  background-color: #f9f2f2;
+}
+
+.paper-sage {
+  background-color: #f4f6f1;
+}
+
+/* Subtle tactile paper fiber grain */
+.paper-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paperNoise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paperNoise)' opacity='0.032'/%3E%3C/svg%3E");
+}
+
+/* Subtle ruled stationery margin pattern for lined note stickers */
+.lined-note-bg {
+  background-color: #fffdf7;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 23px,
+    rgba(109, 46, 70, 0.09) 24px
+  );
+}
+
+/* Washi tape subtle diagonal stripe */
+.washi-stripes-pink {
+  background-color: #ead0d6;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.45),
+    rgba(255, 255, 255, 0.45) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+}
+
+.washi-stripes-sage {
+  background-color: #d6dfd1;
+  background-image: radial-gradient(rgba(74, 93, 68, 0.25) 1.2px, transparent 1.2px);
+  background-size: 9px 9px;
+}
+
+.washi-stripes-butter {
+  background-color: #f2e4b3;
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(166, 134, 48, 0.12),
+    rgba(166, 134, 48, 0.12) 2px,
+    transparent 2px,
+    transparent 10px
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
